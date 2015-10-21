@@ -26,8 +26,8 @@
 //  $LastChangedBy: unknown $
 //
 ////////////////////////////////////////////////////////////////////////////////
+
 using System;
-using System.Windows.Media;
 using System.Xml.Linq;
 
 namespace Svg2Xaml

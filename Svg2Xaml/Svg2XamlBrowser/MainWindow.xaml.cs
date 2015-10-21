@@ -1,22 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.ComponentModel;
+using System.IO;
+using System.IO.Compression;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.IO;
-using System.Threading;
 using System.Windows.Threading;
 using Svg2Xaml;
-using System.IO.Compression;
-using System.Windows.Markup;
 
 namespace Svg2XamlBrowser
 {
@@ -78,7 +72,7 @@ namespace Svg2XamlBrowser
         try
         {
           SetProgress(100.0 * DirectoryEntriesListBox.Items.Count / (DirectoryEntriesListBox.Items.Count + count),
-                      "Loading {0}...", System.IO.Path.GetFileName(file_name));
+                      "Loading {0}...", Path.GetFileName(file_name));
 
           DrawingImage svg_image = null;
 
@@ -120,7 +114,7 @@ namespace Svg2XamlBrowser
 
               ListBoxItem item = new ListBoxItem();
               item.Content = image;
-              item.ToolTip = System.IO.Path.GetFileName(file_name);
+              item.ToolTip = Path.GetFileName(file_name);
               item.Tag = file_name;
               item.PreviewMouseDoubleClick += DirectoryEntriesListBox_Item_PreviewMouseDoubleClick;
               DirectoryEntriesListBox.Items.Add(item);
@@ -142,7 +136,7 @@ namespace Svg2XamlBrowser
 
             ListBoxItem item = new ListBoxItem();
             item.Content = border;
-            item.ToolTip = System.IO.Path.GetFileName(file_name);
+            item.ToolTip = Path.GetFileName(file_name);
             item.Tag = file_name;
             DirectoryEntriesListBox.Items.Add(item);
 
@@ -196,7 +190,7 @@ namespace Svg2XamlBrowser
     private string GetFullPath(TreeViewItem directoryItem)
     {
       if(directoryItem.Parent is TreeViewItem)
-        return System.IO.Path.Combine(GetFullPath(directoryItem.Parent as TreeViewItem), 
+        return Path.Combine(GetFullPath(directoryItem.Parent as TreeViewItem), 
                                       directoryItem.Header as string);
       else
         return directoryItem.Header as string;
@@ -210,8 +204,8 @@ namespace Svg2XamlBrowser
       foreach(string directory in Directory.GetDirectories(GetFullPath(directoryItem)))
       {
         TreeViewItem directory_item = new TreeViewItem();
-        directory_item.Header = System.IO.Path.GetFileName( directory);
-        directory_item.Tag = System.IO.Path.GetFileName(directory);
+        directory_item.Header = Path.GetFileName( directory);
+        directory_item.Tag = Path.GetFileName(directory);
         directory_item.Expanded += DirectoryTreeViewItemExpanded;
         directoryItem.Items.Add(directory_item);
 
@@ -235,7 +229,7 @@ namespace Svg2XamlBrowser
     }
 
     //==========================================================================
-    private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+    private void Window_Closing(object sender, CancelEventArgs e)
     {
       // Ensure load thread has been aborted...
       lock(m_LoadFiles)

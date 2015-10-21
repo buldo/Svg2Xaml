@@ -20,6 +20,7 @@
 //  along with Svg2Xaml. If not, see <http://www.gnu.org/licenses/>.
 //
 ////////////////////////////////////////////////////////////////////////////////
+
 using System.Xml.Linq;
 
 namespace Svg2Xaml

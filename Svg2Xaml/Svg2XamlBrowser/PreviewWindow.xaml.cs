@@ -1,22 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Threading;
-using Svg2Xaml;
-using System.Windows.Threading;
 using System.IO;
 using System.IO.Compression;
-using System.Xml;
+using System.Text;
+using System.Threading;
+using System.Windows;
 using System.Windows.Markup;
+using System.Windows.Media;
+using System.Windows.Threading;
+using System.Xml;
+using Svg2Xaml;
 
 namespace Svg2XamlBrowser
 {

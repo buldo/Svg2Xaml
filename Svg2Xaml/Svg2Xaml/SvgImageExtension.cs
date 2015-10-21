@@ -26,12 +26,12 @@
 //  $LastChangedBy: unknown $
 //
 ////////////////////////////////////////////////////////////////////////////////
+
 using System;
-using System.Windows.Markup;
-using System.Resources;
-using System.Windows;
-using System.IO;
 using System.Diagnostics;
+using System.IO;
+using System.Windows;
+using System.Windows.Markup;
 using System.Windows.Media;
 
 namespace Svg2Xaml

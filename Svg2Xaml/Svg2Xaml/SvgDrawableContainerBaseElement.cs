@@ -26,10 +26,10 @@
 //  $LastChangedBy: unknown $
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Windows.Media;
 using System.Xml.Linq;
-using System.Windows;
-using System;
 
 namespace Svg2Xaml
 {
