@@ -69,7 +69,7 @@ namespace Svg2Xaml
         }
       }
 
-      throw new ArgumentException(String.Format("Unsupported URL value: {0}", value));
+      throw new ArgumentException(string.Format("Unsupported URL value: {0}", value));
     }
 
 

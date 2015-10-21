@@ -97,16 +97,16 @@ namespace Svg2Xaml
                 break;
 
               default:
-                throw new NotSupportedException(String.Format("Unsupported encoding: {0}", encoding));
+                throw new NotSupportedException(string.Format("Unsupported encoding: {0}", encoding));
             }
 
             string[] type_tokens = type.Split('/');
             if(type_tokens.Length != 2)
-              throw new NotSupportedException(String.Format("Unsupported type: {0}", type));
+              throw new NotSupportedException(string.Format("Unsupported type: {0}", type));
 
             type_tokens[0] = type_tokens[0].Trim();
             if(type_tokens[0] != "image")
-              throw new NotSupportedException(String.Format("Unsupported type: {0}", type));
+              throw new NotSupportedException(string.Format("Unsupported type: {0}", type));
 
             switch(type_tokens[1].Trim())
             {
@@ -119,7 +119,7 @@ namespace Svg2Xaml
                 break;
 
               default:
-                throw new NotSupportedException(String.Format("Unsupported type: {0}", type));
+                throw new NotSupportedException(string.Format("Unsupported type: {0}", type));
             }
           }
         }

@@ -145,10 +145,10 @@ namespace Svg2Xaml
       if(stroke_miterlimit_attribute != null)
       {
         if(stroke_miterlimit_attribute.Value == "inherit")
-          StrokeMiterlimit = Double.NaN;
+          StrokeMiterlimit = double.NaN;
         else
         {
-          double miterlimit = Double.Parse(stroke_miterlimit_attribute.Value, CultureInfo.InvariantCulture.NumberFormat);
+          double miterlimit = double.Parse(stroke_miterlimit_attribute.Value, CultureInfo.InvariantCulture.NumberFormat);
           //if(miterlimit < 1)
             //throw new NotSupportedException("A miterlimit less than 1 is not supported.");
           StrokeMiterlimit = miterlimit;
@@ -345,7 +345,7 @@ namespace Svg2Xaml
         switch(element.Name.LocalName)
         {
           default:
-            throw new NotImplementedException(String.Format("Unhandled element: {0}", element));
+            throw new NotImplementedException(string.Format("Unhandled element: {0}", element));
         }
     }
 

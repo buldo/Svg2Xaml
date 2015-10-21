@@ -143,7 +143,7 @@ namespace Svg2Xaml
       else if(transforms.Count > 1)
         return new SvgTransformGroup(transforms.ToArray());
 
-      throw new ArgumentException(String.Format("Unsupported transform value: {0}", value));
+      throw new ArgumentException(string.Format("Unsupported transform value: {0}", value));
     }
 
     //==========================================================================

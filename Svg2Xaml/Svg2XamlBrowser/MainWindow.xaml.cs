@@ -42,7 +42,7 @@ namespace Svg2XamlBrowser
       {
         StatusProgressBar.Visibility = Visibility.Visible;
         StatusProgressBar.Value      = progressValue;
-        StatusTextBlock.Text         = String.Format(text, args);
+        StatusTextBlock.Text         = string.Format(text, args);
       }, 
       DispatcherPriority.Background);
     }
@@ -146,7 +146,7 @@ namespace Svg2XamlBrowser
             item.Tag = file_name;
             DirectoryEntriesListBox.Items.Add(item);
 
-            JournalListBox.Items.Add(String.Format("{0}: {1}", file_name, exception.Message));
+            JournalListBox.Items.Add(string.Format("{0}: {1}", file_name, exception.Message));
 
           }, DispatcherPriority.Background);
 
@@ -159,7 +159,7 @@ namespace Svg2XamlBrowser
 
         StatusProgressBar.Visibility = Visibility.Collapsed;
         StatusProgressBar.Value = 0;
-        StatusTextBlock.Text = String.Format("Successfully loaded {0} files, {1} files could not be loaded properly", successful, errorneous);
+        StatusTextBlock.Text = string.Format("Successfully loaded {0} files, {1} files could not be loaded properly", successful, errorneous);
 
       }, DispatcherPriority.Background);
 
@@ -275,11 +275,11 @@ namespace Svg2XamlBrowser
         string path = GetFullPath(DirectoryTreeView.SelectedItem as TreeViewItem);
 
         DirectoryTextBox.Text = path;
-        StatusTextBlock.Text = String.Format("Scanning directory {0}...", path);
+        StatusTextBlock.Text = string.Format("Scanning directory {0}...", path);
         StatusProgressBar.Value = 0;
         StatusProgressBar.Visibility = Visibility.Visible;
         JournalListBox.Items.Clear();
-        JournalListBox.Items.Add(String.Format("Scanning directory {0}...", path));
+        JournalListBox.Items.Add(string.Format("Scanning directory {0}...", path));
         DirectoryEntriesListBox.Items.Clear();
 
         // Fill queue with the files to load...
@@ -319,7 +319,7 @@ namespace Svg2XamlBrowser
       if(directoryInfo.Parent == null)
       {
         foreach(TreeViewItem root_item in DirectoryTreeView.Items)
-         if(String.Compare((string)root_item.Tag, directoryInfo.Name, true) == 0)
+         if(string.Compare((string)root_item.Tag, directoryInfo.Name, true) == 0)
             return root_item;
       }
       else
@@ -330,7 +330,7 @@ namespace Svg2XamlBrowser
           root_item.IsExpanded = true;
 
           foreach(TreeViewItem child_item in root_item.Items)
-            if(String.Compare((string)child_item.Tag, directoryInfo.Name, true) == 0)
+            if(string.Compare((string)child_item.Tag, directoryInfo.Name, true) == 0)
               return child_item;
         }
       }

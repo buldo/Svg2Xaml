@@ -64,7 +64,7 @@ namespace Svg2Xaml
             break;
 
           default:
-            throw new NotImplementedException(String.Format("maskUnits value '{0}' is no supported", mask_units_attribute.Value));
+            throw new NotImplementedException(string.Format("maskUnits value '{0}' is no supported", mask_units_attribute.Value));
         }
     }
 

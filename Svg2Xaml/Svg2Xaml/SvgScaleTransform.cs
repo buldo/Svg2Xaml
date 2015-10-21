@@ -69,11 +69,11 @@ namespace Svg2Xaml
       string[] tokens = transform.Split(new char[] { ' ', '\t', ',' }, StringSplitOptions.RemoveEmptyEntries);
 
       if(tokens.Length == 1)
-        return new SvgScaleTransform(Double.Parse(tokens[0].Trim(), CultureInfo.InvariantCulture.NumberFormat));
+        return new SvgScaleTransform(double.Parse(tokens[0].Trim(), CultureInfo.InvariantCulture.NumberFormat));
       
       if(tokens.Length == 2)
-        return new SvgScaleTransform(Double.Parse(tokens[0].Trim(), CultureInfo.InvariantCulture.NumberFormat),
-                                     Double.Parse(tokens[1].Trim(), CultureInfo.InvariantCulture.NumberFormat));
+        return new SvgScaleTransform(double.Parse(tokens[0].Trim(), CultureInfo.InvariantCulture.NumberFormat),
+                                     double.Parse(tokens[1].Trim(), CultureInfo.InvariantCulture.NumberFormat));
 
       throw new NotSupportedException();
     }

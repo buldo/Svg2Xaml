@@ -70,12 +70,12 @@ namespace Svg2Xaml
     {
       string[] tokens = transform.Split(new char[] { ' ', '\t', ',' }, StringSplitOptions.RemoveEmptyEntries);
       if(tokens.Length == 6)
-        return new SvgMatrixTransform(Double.Parse(tokens[0].Trim(), CultureInfo.InvariantCulture.NumberFormat),
-                                      Double.Parse(tokens[1].Trim(), CultureInfo.InvariantCulture.NumberFormat),
-                                      Double.Parse(tokens[2].Trim(), CultureInfo.InvariantCulture.NumberFormat),
-                                      Double.Parse(tokens[3].Trim(), CultureInfo.InvariantCulture.NumberFormat), 
-                                      Double.Parse(tokens[4].Trim(), CultureInfo.InvariantCulture.NumberFormat), 
-                                      Double.Parse(tokens[5].Trim(), CultureInfo.InvariantCulture.NumberFormat));
+        return new SvgMatrixTransform(double.Parse(tokens[0].Trim(), CultureInfo.InvariantCulture.NumberFormat),
+                                      double.Parse(tokens[1].Trim(), CultureInfo.InvariantCulture.NumberFormat),
+                                      double.Parse(tokens[2].Trim(), CultureInfo.InvariantCulture.NumberFormat),
+                                      double.Parse(tokens[3].Trim(), CultureInfo.InvariantCulture.NumberFormat), 
+                                      double.Parse(tokens[4].Trim(), CultureInfo.InvariantCulture.NumberFormat), 
+                                      double.Parse(tokens[5].Trim(), CultureInfo.InvariantCulture.NumberFormat));
 
       throw new ArgumentException();
     }

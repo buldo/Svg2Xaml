@@ -68,7 +68,7 @@ namespace Svg2Xaml
             break;
 
           default:
-            throw new NotImplementedException(String.Format("patternUnits value '{0}' is no supported", pattern_units_attribute.Value));
+            throw new NotImplementedException(string.Format("patternUnits value '{0}' is no supported", pattern_units_attribute.Value));
         }
 
       XAttribute width_attribute = patternElement.Attribute("width");

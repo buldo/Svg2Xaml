@@ -65,7 +65,7 @@ namespace Svg2Xaml
         throw new ArgumentException("value must not be empty", "value");
 
       if(value == "inherit")
-        return new SvgLength(Double.NaN, null);
+        return new SvgLength(double.NaN, null);
 
       string unit = null;
 
@@ -77,7 +77,7 @@ namespace Svg2Xaml
           break;
         }
 
-      return new SvgLength(Double.Parse(value, CultureInfo.InvariantCulture.NumberFormat), unit);
+      return new SvgLength(double.Parse(value, CultureInfo.InvariantCulture.NumberFormat), unit);
     }
 
     //==========================================================================

@@ -178,7 +178,7 @@ namespace Svg2Xaml
           break;
 
         default:
-          throw new NotImplementedException(String.Format("Unhandled element: {0}", element));
+          throw new NotImplementedException(string.Format("Unhandled element: {0}", element));
       }
     }
 

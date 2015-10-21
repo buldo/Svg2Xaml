@@ -65,7 +65,7 @@ namespace Svg2Xaml
             break;
 
           default:
-            throw new NotImplementedException(String.Format("gradientUnits value '{0}' is no supported", gradient_units_attribute.Value));
+            throw new NotImplementedException(string.Format("gradientUnits value '{0}' is no supported", gradient_units_attribute.Value));
         }
 
       XAttribute gradient_transform_attribute = gradientElement.Attribute("gradientTransform");
@@ -101,7 +101,7 @@ namespace Svg2Xaml
             break;
 
           default:
-            throw new NotImplementedException(String.Format("Unhandled element: {0}", element));
+            throw new NotImplementedException(string.Format("Unhandled element: {0}", element));
         }
     }
 

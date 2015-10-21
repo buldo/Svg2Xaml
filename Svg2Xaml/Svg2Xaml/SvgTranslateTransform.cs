@@ -63,8 +63,8 @@ namespace Svg2Xaml
       if(tokens.Length != 2)
         throw new FormatException("A translate transformation must have two values");
 
-      return new SvgTranslateTransform(Double.Parse(tokens[0].Trim(), CultureInfo.InvariantCulture.NumberFormat),
-                                       Double.Parse(tokens[1].Trim(), CultureInfo.InvariantCulture.NumberFormat));
+      return new SvgTranslateTransform(double.Parse(tokens[0].Trim(), CultureInfo.InvariantCulture.NumberFormat),
+                                       double.Parse(tokens[1].Trim(), CultureInfo.InvariantCulture.NumberFormat));
     }
 
   } // class SvgTranslateTransform

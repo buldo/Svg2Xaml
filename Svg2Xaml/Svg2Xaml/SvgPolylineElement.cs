@@ -57,7 +57,7 @@ namespace Svg2Xaml
           string coordinate = coordinate_value.Trim();
           if(coordinate == "")
             continue;
-          coordinates.Add(Double.Parse(coordinate, CultureInfo.InvariantCulture.NumberFormat));
+          coordinates.Add(double.Parse(coordinate, CultureInfo.InvariantCulture.NumberFormat));
         }
 
         for(int i = 0; i < coordinates.Count - 1; i += 2)
