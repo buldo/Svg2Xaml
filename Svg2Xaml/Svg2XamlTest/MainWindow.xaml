@@ -1,0 +1,10 @@
+﻿<Window x:Class="Svg2XamlTest.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Svg2XamlTest" 
+    Height="192" 
+    Width="192">
+  <Viewbox>
+    <Image Name="Image" />
+  </Viewbox>
+</Window>
