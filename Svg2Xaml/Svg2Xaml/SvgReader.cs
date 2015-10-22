@@ -103,8 +103,10 @@ namespace Svg2Xaml
         /// </returns>
         public static DrawingImage Load(Stream stream, SvgReaderOptions options)
         {
-            using (XmlReader reader = XmlReader.Create(stream, new XmlReaderSettings {DtdProcessing = DtdProcessing.Parse}))
+            using (XmlReader reader = XmlReader.Create(stream, new XmlReaderSettings { DtdProcessing = DtdProcessing.Ignore }))
+            {
                 return Load(reader, options);
+            }
         }
 
         /// <summary>
